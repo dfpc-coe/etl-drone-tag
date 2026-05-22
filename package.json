@@ -1,0 +1,25 @@
+{
+    "name": "coe-etl-template",
+    "type": "module",
+    "prviate": true,
+    "version": "1.0.0",
+    "description": "",
+    "main": "task.ts",
+    "scripts": {
+        "lint": "eslint *.ts",
+        "build": "tsc --build",
+        "test": "exit 0"
+    },
+    "author": "Nicholas Ingalls <nicholas.ingalls@state.co.us>",
+    "license": "ISC",
+    "devDependencies": {
+        "@eslint/js": "^10.0.0",
+        "eslint": "^10.0.0",
+        "typescript": "^6.0.0",
+        "typescript-eslint": "^8.0.0"
+    },
+    "dependencies": {
+        "@sinclair/typebox": "^0.34.0",
+        "@tak-ps/etl": "^10.0.0"
+    }
+}
