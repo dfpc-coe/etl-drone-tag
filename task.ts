@@ -4,14 +4,11 @@ import type { Event } from '@tak-ps/etl';
 import { Feature } from '@tak-ps/node-cot'
 import ETL, { SchemaType, handler as internal, local, DataFlowType, InvocationType } from '@tak-ps/etl';
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars --  Fetch with an additional Response.typed(TypeBox Object) definition
-import { fetch } from '@tak-ps/etl';
-
-/**
- * The Input Schema contains the environment object that will be requested via the CloudTAK UI
- * It should be a valid TypeBox object - https://github.com/sinclairzx81/typebox
- */
 const InputSchema = Type.Object({
+    AccessToken: Type.String({
+        default: '',
+        description: 'Access Token for API calls'
+    }),
     'DEBUG': Type.Boolean({
         default: false,
         description: 'Print results in logs'
@@ -25,7 +22,7 @@ const InputSchema = Type.Object({
 const OutputSchema = Type.Object({})
 
 export default class Task extends ETL {
-    static name = 'default'
+    static name = 'etl-drone-tag'
     static flow = [ DataFlowType.Incoming ];
     static invocation = [ InvocationType.Schedule ];
 
