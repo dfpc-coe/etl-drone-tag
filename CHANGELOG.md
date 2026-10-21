@@ -10,6 +10,12 @@
 
 ## Version History
 
+### Pending Release
+
+### v1.4.0
+
+- :arrow_up: Update Lambda base image and CI to Node.js 24
+
 ### v1.3.0
 
 - :arrow_up: Update Core Dependencies
